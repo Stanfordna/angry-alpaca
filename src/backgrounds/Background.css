@@ -1,0 +1,6 @@
+app-background {
+    position: inherit;
+    height: inherit;
+    width: inherit;
+    z-index: 1;
+}

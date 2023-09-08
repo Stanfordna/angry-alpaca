@@ -1,0 +1,65 @@
+/* Canvas Color changing */
+:root {
+  --background-color-odd: #54ac7933;
+  --background-color-even: #b8673833;
+}
+
+sky-box {
+  position: inherit;
+  height: inherit;
+  width: inherit;
+  animation-name: color-shift;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  /* background-color: var(--background-color-odd); */
+}
+@keyframes color-shift {
+  from {
+    background-color: var(--background-color-even);
+  }
+  to {
+    background-color: var(--background-color-odd);
+  }
+}
+
+star-origin {
+  position: relative;
+  top: -50px;
+  left: -50px;
+}
+/* Shooting Stars */
+.star {
+  position: relative;
+  height: 5vmin;
+  pointer-events: none;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .star {
+    /* animation-name: skyfall, spin; */
+    animation-iteration-count: infinite, infinite;
+    animation-duration: 3s, 20s;
+    animation-timing-function: ease-in, linear;
+  }
+}
+@keyframes skyfall {
+  from {
+    top: 0;
+    left: 0;
+    opacity: 1.0;
+  }
+  to {
+    top: 100%;
+    left: 100%;
+    opacity: 0;
+  }
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

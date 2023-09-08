@@ -1,24 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+} from "react-router-dom";
+import Background from './backgrounds/Background';
+import Header from './layout/Header'
+import Experience from './layout/Experience'
+
+const background = "APOD"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <app-canvas>
+        <Background identifier={background}/>
+        <Header />
+        <site-body>
+          <Experience />
+          <a href="https://reactjs.org" target="_blank" rel="noopener noreferrer">
+            Learn React
+          </a>
+        </site-body>
+      </app-canvas>
+    </Router>
   );
 }
 

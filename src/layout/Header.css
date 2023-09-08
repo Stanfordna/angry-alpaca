@@ -1,0 +1,45 @@
+site-header {
+  background-color: var(--standard-tint);
+  color: var(--primary-color);
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  border-bottom: 0.2rem solid var(--primary-color);
+  min-height: 10vh;
+}
+
+header-title {
+  font-size: calc(10px + 3vmin);
+  margin: auto 0 1rem 3rem;
+  font-weight: bold;
+}
+header-title > code::after {
+  content: '_';
+  animation: blink 1.5s step-start infinite;
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+header-spacer {
+  flex: 1 1 0px;
+  min-height: inherit; 
+  /* No purpose for min-height, other than making this element 
+     height nonzero so that it can be seen in browser DevTools */
+}
+
+header-contact {
+  font-size: calc(6px + 2vmin);
+  margin: auto 3rem 1rem 0;
+  color: var(--app-background);
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  font-weight: bold;
+  padding: 6px 20px;
+}

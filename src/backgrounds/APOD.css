@@ -1,0 +1,15 @@
+apod-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: inherit;
+    height: inherit;
+    width: inherit;
+}
+
+#img-apod {
+    position: absolute;
+    min-height: 100vh;
+    height: initial;
+    width: auto;
+}
