@@ -9,7 +9,8 @@ apod-container {
 
 #img-apod {
     position: absolute;
-    min-height: 100vh;
+    min-height: 110vh;
+    min-width: 110vw;
     height: initial;
-    width: auto;
+    width: initial;
 }

@@ -5,11 +5,12 @@ experience-container {
   width: 50vw;
   min-width: min(calc(100vw - 4rem), 420px);
   max-width: calc(100vw - 4rem);
+  max-height: calc(90vh - 4rem);
   z-index: 3;
   border: 0.2rem solid var(--primary-color);
   border-left: none;
   min-height: 10vh;
-  padding: 1rem 1rem 2rem 2rem;
+  padding: 1rem 2rem 2rem 2rem;
 }
 
 experience-body {
@@ -17,17 +18,23 @@ experience-body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  max-width: 40vw;
+  max-width: 42vw;
   margin: 0 0 0 auto;
 }
 
 my-name {
-  margin: 1rem 0 0;
   font-size: 2rem;
   font-weight: bolder;
+  line-height: 1.75rem;
 }
 my-name > my-caps {
   font-size: 2.5rem;
+}
+
+my-positions {
+  font-display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 my-hello,
