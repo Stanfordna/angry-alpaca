@@ -11,6 +11,8 @@ experience-container {
   border-left: none;
   min-height: 10vh;
   padding: 1rem 2rem 2rem 2rem;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 experience-body {
@@ -18,7 +20,7 @@ experience-body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  max-width: 42vw;
+  max-width: max(320px, 42vw);
   margin: 0 0 0 auto;
 }
 

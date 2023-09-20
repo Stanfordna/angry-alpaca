@@ -12,7 +12,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: front-end
+    container_name: angry-alpaca-frontend
     environment:
       NODE_ENV: production
     ports:
