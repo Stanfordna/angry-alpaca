@@ -5,14 +5,35 @@ experience-container {
   width: 50vw;
   min-width: min(calc(100vw - 4rem), 420px);
   max-width: calc(100vw - 4rem);
-  max-height: calc(90vh - 4rem);
+  height: calc(90vh - 7rem);
+  max-height: 45rem;
   z-index: 3;
   border: 0.2rem solid var(--primary-color);
   border-left: none;
-  min-height: 10vh;
   padding: 1rem 2rem 2rem 2rem;
   overflow-y: scroll;
   overflow-x: hidden;
+  -ms-overflow-style: none;  /* Hide Scrollbar for IE and Edge */
+  scrollbar-width: none;  /* Hide Scrollbar for Firefox */
+}
+experience-container::-webkit-scrollbar {
+  width: 12px;
+}
+experience-container::-webkit-scrollbar-track {
+  background: #00000042;
+}
+experience-container::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  border-left: 9px solid transparent;
+  border-right: none;
+  background-clip: padding-box;
+}
+experience-container::-webkit-scrollbar-thumb:hover {
+  border: 0;
 }
 
 experience-body {
@@ -34,9 +55,43 @@ my-name > my-caps {
 }
 
 my-positions {
-  font-display: flex;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+position-details {
+  display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  border-radius: 5px;
+  align-items: baseline;
+  margin-top: 1rem;
+  padding: 0.5rem;
+}
+position-details:hover {
+  background-color: var(--standard-tint);
+}
+
+position-title,
+position-duration {
+  flex: 0 0 fit-content;
+  text-wrap: nowrap;
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+position-spacer {
+  flex: 1 1 0px;
+  min-height: inherit; 
+}
+
+position-duration {
+  /* opacity: 69%; */
+}
+
+position-description {
+  margin-top: 0.5rem;
 }
 
 my-hello,
@@ -51,4 +106,12 @@ my-about > my-caps,
 my-positions > my-caps,
 my-education > my-caps {
   font-size: 1.25rem;
+}
+
+project-skills {
+  display: flex;
+}
+
+my-skill {
+  margin-right: 5px;
 }
