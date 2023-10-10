@@ -76,4 +76,4 @@ EXPOSE 3000
 # CMD serve -s build
 
 # Run the application.
-CMD npm start
+CMD npm run start-ssl
