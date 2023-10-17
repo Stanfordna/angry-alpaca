@@ -82,7 +82,7 @@ function Experience() {
           </my-positions>
           <my-projects>
             <h2>Personal Projects</h2>
-            <purpose-statement>I feel stuff when I do stuff</purpose-statement>
+            <purpose-statement>I like to do stuff</purpose-statement>
             <project-details>
               <project-title>NicholasStanford.dev</project-title>
               <project-description>

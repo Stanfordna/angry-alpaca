@@ -69,7 +69,6 @@ COPY --from=build /usr/src/app/. ./.
 RUN npm run build
 
 WORKDIR /usr/src/app/build
-
 # Expose the port that the application listens on.
 EXPOSE 3000
 # Run the application.
