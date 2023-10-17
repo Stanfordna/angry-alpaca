@@ -32,6 +32,7 @@ FROM deps as build
 
 # Download additional development dependencies before building, as some projects require
 # "devDependencies" to be installed to build. If you don't need this, remove this step.
+
 RUN --mount=type=bind,source=package.json,target=package.json \
     --mount=type=bind,source=package-lock.json,target=package-lock.json \
     --mount=type=cache,target=/root/.npm \
@@ -64,9 +65,14 @@ RUN npm install
 # the built application from the build stage into the image.
 COPY --from=deps /usr/src/app/node_modules ./node_modules
 COPY --from=build /usr/src/app/. ./.
+# COPY --from=build /usr/src/app/ssl ./ssl
 
 # Run the build script.
 RUN npm run build
+
+ENV HTTPS=true
+ENV SSL_CRT_FILE=/usr/src/app/ssl/ssl-cert.pem
+ENV SSL_KEY_FILE=/usr/src/app/ssl/rsa-key.pem
 
 WORKDIR /usr/src/app/build
 # Expose the port that the application listens on.
@@ -75,4 +81,4 @@ EXPOSE 3000
 # CMD serve -s build
 
 # Run the application.
-CMD npm run start-ssl
+CMD npm run start

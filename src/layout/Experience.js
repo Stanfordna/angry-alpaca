@@ -8,20 +8,25 @@ function Experience() {
             My name is
           </my-hello>
           <my-name>
-            NICHOLAS STANFORD
+            Nicholas Stanford
           </my-name>
+          <my-title>
+            Full Stack Web Developer +&nbsp;Professional&nbsp;Problem&nbsp;Solver
+          </my-title>
           <my-about>
-            <h1>Full Stack Web Developer</h1>
-            I enjoy solving problems and making clients' lives easier.
+            I do stuff.
           </my-about>
           <my-positions>
-            <h2>Experience</h2>
+            {/* <h2>Experience</h2>        KEEP THIS??????????????????????????????????????????????????????????????????????????*/}
             <position-details>
               <position-title>Web Application Developer</position-title>
               <position-spacer />
               <position-duration>
                 September 2022 to Present
               </position-duration>
+              <position-employer>
+                Edgewater Federal Solutions
+              </position-employer>
               <position-description>
                 Contracting with Sandia National Labs in Albuquerque, New Mexico to build 
                 full stack applications and automate workflows for the Department of Energy.
@@ -41,6 +46,9 @@ function Experience() {
               <position-duration>
                 July 2020 to September 2022
               </position-duration>
+              <position-employer>
+                University of New Mexico
+              </position-employer>
               <position-description>
                 Migrated UNM web applications onto Drupal CMS. Built custom modules for Drupal using PHP and Javascript.
                 Used shell and Python scripting to retrieve, process and report project milestone progress data to 
@@ -58,11 +66,14 @@ function Experience() {
               </position-skills>    
             </position-details>
             <position-details>
-              <position-title>Webserver Support Technician • Wordpress Developer</position-title>
+              <position-title>Webserver Support Technician •&nbsp;Wordpress&nbsp;Developer</position-title>
               <position-spacer />
               <position-duration>
                 October 2018 to July 2020
               </position-duration>
+              <position-employer>
+                Indra.com
+              </position-employer>
               <position-description>
                 Assisted customers with deployment of sites and implementation of custom Wordpress modules.
                 Managed web hosting, domain name email, and name servers. Monitored mail queues for suspicious traffic 
