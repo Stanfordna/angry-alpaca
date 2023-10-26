@@ -13,7 +13,7 @@ site-header {
 }
 
 header-title {
-  font-size: calc(10px + 3vmin);
+  font-size: max(1.75rem, calc(10px + 3vmin));
   margin: auto 0 1rem 2rem;
   font-weight: bold;
 }
@@ -47,11 +47,31 @@ header-contact {
 header-envelope {
   background-color: transparent;
   background-repeat: no-repeat no-repeat;
-  background-position: center center;
+  background-position: 75% 75%;
   background-size: contain;
-  margin: auto 2rem 1rem 0;
+  margin: auto 2rem 1rem 1.25rem;
   flex-basis: 3rem;
   width: 100%;
-  height: 44px;
+  height: 40px;
+  display: none;
   /* padding-top: 70.83%; */
+}
+
+header-contact,
+header-envelope {
+  transition: all .2s ease-in-out;
+}
+header-contact:hover,
+header-envelope:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+@media (max-width: calc(500px + 2rem)) {
+  header-contact {
+    display: none;
+  }
+  header-envelope {
+    display: block;
+  }
 }

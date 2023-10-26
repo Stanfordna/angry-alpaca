@@ -10,14 +10,19 @@ function Header() {
           <code>{"NicholasStanford"}</code>
         </header-title>
         <header-spacer />
-        <header-contact>
+        <header-contact
+          onClick={(e) => {
+            window.location.href = "mailto:stanfordnas@gmail.com";
+            e.preventDefault();
+          }}>
           CONTACT
         </header-contact>
         <header-envelope 
-          style={{ backgroundImage: `url(${envelope})` }} >
-          <Button
-            href="https://google.com" />
-        </header-envelope>
+          style={{ backgroundImage: `url(${envelope})` }}
+          onClick={(e) => {
+            window.location.href = "mailto:stanfordnas@gmail.com";
+            e.preventDefault();
+          }} />
       </site-header>
     );
 }

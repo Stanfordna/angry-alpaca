@@ -14,10 +14,10 @@ function Experience() {
             Full Stack Web Developer +&nbsp;Professional&nbsp;Problem&nbsp;Solver
           </my-title>
           <my-about>
-            I do stuff.
+            I do computer things.
           </my-about>
           <my-positions>
-            {/* <h2>Experience</h2>        KEEP THIS??????????????????????????????????????????????????????????????????????????*/}
+            <positions-header>Professional Experience</positions-header>
             <position-details>
               <position-title>Web Application Developer</position-title>
               <position-spacer />
@@ -69,7 +69,7 @@ function Experience() {
               <position-title>Webserver Support Technician •&nbsp;Wordpress&nbsp;Developer</position-title>
               <position-spacer />
               <position-duration>
-                October 2018 to July 2020
+                August 2018 to July 2020
               </position-duration>
               <position-employer>
                 Indra.com
@@ -92,8 +92,12 @@ function Experience() {
             </position-details>
           </my-positions>
           <my-projects>
-            <h2>Personal Projects</h2>
-            <purpose-statement>I like to do stuff</purpose-statement>
+            <projects-header>
+              Personal Projects
+            </projects-header>
+            <purpose-statement>
+              I like to do stuff
+            </purpose-statement>
             <project-details>
               <project-title>NicholasStanford.dev</project-title>
               <project-description>
@@ -118,18 +122,34 @@ function Experience() {
             </project-details>
           </my-projects>
           <my-education>
-            <h2>Education</h2>
-            <my-degree>B.S. Computer Science • University of Colorado</my-degree>
+            <education-header>Education</education-header>
+            <degree-details>
+              <my-degree>B.S. Computer Science • University of Colorado</my-degree>
+              <degree-spacer />
+              <degree-duration>
+                January 2018 to May 2020
+              </degree-duration>
+              <alma-mater>
+                University of Colorado Denver
+              </alma-mater>
+            </degree-details>
             <project-details>
               <project-title>Senior Project</project-title>
-              I did an thing with Chunity
+              <project-description>
+                Project was an interactive environment built using the Unity Engine 
+                in which users could synthesize and play instruments. Project used 
+                the Unity Engine and ChucK, a language designed for the audio synthesis.
+                Project was the Engineering Capstone Expo winner in the Computer Science
+                Category and was runner up for the "Peoples’ Choice" award at the 
+                University of Colorado Research and Creative Activities Symposium.
+              </project-description>
               <project-skills>
-                <my-skill>sKill</my-skill>
-                <my-skill>sKill</my-skill>
-                <my-skill>sKill</my-skill>
+                <my-skill>ChucK</my-skill>
+                <my-skill>Unity</my-skill>
+                <my-skill>C#</my-skill>
               </project-skills>
             </project-details>
-            <project-details>
+            <project-details style={{display: 'none'}}>
               <project-title>Something on Github</project-title>
               I did a gif app for Android
               <project-skills>
