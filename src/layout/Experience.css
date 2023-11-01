@@ -207,6 +207,9 @@ project-skills {
   flex-wrap: wrap;
   max-width: inherit;
 }
+my-skill:not(:last-child)::after {
+  content: ",";
+}
 
 @media (min-width: 1600px) {
   position-description,

@@ -23,7 +23,7 @@ function Header() {
             window.location.href = "mailto:stanfordnas@gmail.com";
             e.preventDefault();
           }} />
-      </site-header>
+      </site-header> 
     );
 }
 

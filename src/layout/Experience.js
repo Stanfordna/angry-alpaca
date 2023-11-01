@@ -31,6 +31,7 @@ function Experience() {
                 Contracting with Sandia National Labs in Albuquerque, New Mexico to build 
                 full stack applications and automate workflows for the Department of Energy.
               </position-description>
+              <h4>Skills Practiced:&nbsp;</h4>
               <position-skills>
                 <my-skill>Apache Tomcat</my-skill>
                 <my-skill>SQL</my-skill>
@@ -54,6 +55,7 @@ function Experience() {
                 Used shell and Python scripting to retrieve, process and report project milestone progress data to 
                 the National Institutes of Health.
               </position-description>
+              <h4>Skills Practiced:&nbsp;</h4>
               <position-skills>
                 <my-skill>Apache HTTP Server</my-skill>
                 <my-skill>PHP</my-skill>
@@ -79,7 +81,8 @@ function Experience() {
                 Managed web hosting, domain name email, and name servers. Monitored mail queues for suspicious traffic 
                 and responded to cybersecurity threats against web and mail servers urgently and efficiently. 
               </position-description>
-              <position-skills>
+              <h4>Skills Practiced:&nbsp;</h4>
+              <position-skills> 
                 <my-skill>Apache HTTP Server</my-skill>
                 <my-skill>DNS</my-skill>
                 <my-skill>Unix Shell</my-skill>
