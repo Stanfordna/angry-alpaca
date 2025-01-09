@@ -21,6 +21,13 @@
     "@babel/preset-env": "7.22.5",
     "react-router-dom": "^6.15.0"
   },
+  "overrides": {
+    "react-scripts": {
+      "@svgr/webpack": "8.1.0",
+      "typescript": "4.9.5",
+      "postcss": "8.4.38"
+    }
+  },
   "scripts": {
     "start-ssl": "set HTTPS=true&&set SSL_CRT_FILE=ssl/ssl-cert.pem&&set SSL_KEY_FILE=ssl/rsa-key.pem&&react-scripts start",
     "start": "react-scripts start",
