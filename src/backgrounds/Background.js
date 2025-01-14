@@ -10,7 +10,6 @@ const Components = {
 function Background(props) {
 
     let selection = props['identifier'];
-    console.log("Attempting to insert Background Component: " + props['identifier']);
     if (Components[selection] !== "undefined") {
       return (   
         <app-background>

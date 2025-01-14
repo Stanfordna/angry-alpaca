@@ -143,7 +143,7 @@ function Experience() {
                 in which users could synthesize and play instruments. Project used 
                 the Unity Engine and ChucK, a language designed for the audio synthesis.
                 Project was the Engineering Capstone Expo winner in the Computer Science
-                Category and was runner up for the "Peoples’ Choice" award at the 
+                Category and was runner up for the "Peoples' Choice" award at the 
                 University of Colorado Research and Creative Activities Symposium.
               </project-description>
               <project-skills>

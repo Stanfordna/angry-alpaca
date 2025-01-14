@@ -76,7 +76,7 @@ ENV SSL_KEY_FILE=/usr/src/app/ssl/rsa-key.pem
 
 WORKDIR /usr/src/app/build
 # Expose the port that the application listens on.
-EXPOSE 3000
+EXPOSE 42069
 # Run the application.
 # CMD serve -s build
 

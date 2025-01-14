@@ -18,8 +18,8 @@ experience-container {
   width: 55vw;
   min-width: min(calc(100vw - 0.5rem), 500px);
   max-width: calc(100vw - 4rem);
-  height: calc(90vh - 7rem);
-  max-height: 45rem;
+  height: calc(95vh - 5rem);
+  max-height: 47rem;
   z-index: 3;
   border: 0.2rem solid var(--primary-color);
   border-left: none;
