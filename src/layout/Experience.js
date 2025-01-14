@@ -5,13 +5,13 @@ function Experience() {
       <experience-container>
         <experience-body>
           <my-hello>
-            My name is
+            Hello, I'm
           </my-hello>
           <my-name>
             Nicholas Stanford
           </my-name>
           <my-title>
-            Full Stack Web Developer +&nbsp;Professional&nbsp;Problem&nbsp;Solver
+            Professional Full-Stack Software&nbsp;Developer
           </my-title>
           <my-about>
             I do computer things.
@@ -19,16 +19,44 @@ function Experience() {
           <my-positions>
             <positions-header>Professional Experience</positions-header>
             <position-details>
+              <position-title>Principal Software Engineer</position-title>
+              <position-spacer />
+              <position-duration>
+                January 2024 to Present
+              </position-duration>
+              <position-employer>
+                Northrop Grumman Space Sector
+              </position-employer>
+              <position-description>
+                I am currently the sole developer on the Systems Engineering and Integration Test team (SEIT)
+                for my project with Northrop Grumman Space Systems. I write integrations tests using 
+                Python's Robot Framwework to validate messages produced by various Java and Python 
+                Microservices. I serve as the primary authority within my mission with regard to the
+                code base and functionality of our suite of tests, and have containerized our test suite.
+                As a result, a single tightly controlled container in k8s runs our tests and our testers
+                do not need to configure their workspace instances for testing.
+              </position-description>
+              <h4>Skills Practiced:&nbsp;</h4>
+              <position-skills>
+                <my-skill>Python</my-skill>
+                <my-skill>Java</my-skill>
+                <my-skill>Kubernetes</my-skill>
+                <my-skill>Bash</my-skill>
+                <my-skill>Integration Testing</my-skill>
+                <my-skill>AWS</my-skill>
+              </position-skills>    
+            </position-details>
+            <position-details>
               <position-title>Web Application Developer</position-title>
               <position-spacer />
               <position-duration>
-                September 2022 to Present
+                September 2022 to January 2024
               </position-duration>
               <position-employer>
                 Edgewater Federal Solutions
               </position-employer>
               <position-description>
-                Contracting with Sandia National Labs in Albuquerque, New Mexico to build 
+                Contractied with Sandia National Labs in Albuquerque, New Mexico to build 
                 full stack applications and automate workflows for the Department of Energy.
               </position-description>
               <h4>Skills Practiced:&nbsp;</h4>
@@ -77,9 +105,10 @@ function Experience() {
                 Indra.com
               </position-employer>
               <position-description>
-                Assisted customers with deployment of sites and implementation of custom Wordpress modules.
-                Managed web hosting, domain name email, and name servers. Monitored mail queues for suspicious traffic 
-                and responded to cybersecurity threats against web and mail servers urgently and efficiently. 
+                Worked in a customer-facing role managing DNS, registration, web hosting and custom domain email
+                for Indra customers. Handled the deployment of web apps and sites, and provided support to clients
+                in the development of Wordpress modules. Implemented bash and Python scripts in order to monitor
+                traffic through our Apache web and mail servers to more quickly respond to cyber threats.
               </position-description>
               <h4>Skills Practiced:&nbsp;</h4>
               <position-skills> 

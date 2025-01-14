@@ -75,10 +75,7 @@ my-name {
   padding: 0 0 0 1.5rem;
 }
 my-title {
-  margin-left: 4.5rem;
-  margin-right: 0;
-  padding: 0.5rem 0;
-  text-indent: -6rem;
+  padding: 0.5rem 1rem;
   text-align: center;
   align-self: center;
   font-size: min(5vw, 1.5rem);
