@@ -4,12 +4,10 @@
 # If you need more help, visit the Dockerfile reference guide at
 # https://docs.docker.com/engine/reference/builder/
 
-ARG NODE_VERSION=20.5.1
-
 ################################################################################
 # Use node image for base image for all stages.
-FROM node:${NODE_VERSION}-alpine as base
-
+FROM node:lts-bookworm-slim as base
+USER root
 # Set working directory for all build stages.
 WORKDIR /usr/src/app
 
