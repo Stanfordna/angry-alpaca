@@ -3,7 +3,19 @@
 version='0.1.0'
 name='angry-alpaca'
 docker_hub_url='docker.io/angryalpaca'
-volume_opts='-v /ssh:/home/stanf/.ssh'
+volume_opts="-v $PWD"'/.ssl:/home/stanf/.ssl'
+
+if ask "Generate new ssl certs with certbot?"
+then
+    if [ ! -d .ssl ]
+    then
+        mkdir .ssl
+    fi
+    cd .ssl
+    echo "Running > certbot certonly --standalone"
+    certbot certonly --standalone
+    cd ..
+fi
 
 if [ -z "`docker images -q $name`" ] && ask "No local container $name found. Pull image $docker_hub_url/$name:$version?"
 then
