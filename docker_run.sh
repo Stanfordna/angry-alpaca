@@ -25,8 +25,8 @@ fi
 
 if ! [ -z "`docker images -q $name`" ]
     then
-    echo "Running Container: $name "
-    docker run --rm \
+    echo "Running Container: $name:$version in detached mode with restart policy unless-stopped."
+    docker run -d --restart unless-stopped \
         --name $name \
         $volume_opts \
         $name:$version
