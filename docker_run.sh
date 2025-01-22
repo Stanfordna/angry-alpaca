@@ -3,16 +3,17 @@
 version='0.1.0'
 name='angry-alpaca'
 docker_hub_url='docker.io/angryalpaca'
-volume_opts="-v $PWD/.ssl:/home/stanf/.ssl"
+volume_opts="-v /${PWD}/ssl:/home/angry-alpaca/ssl"
 
 if ask "Generate new ssl certs with certbot?"
 then
-    if [ ! -d .ssl ]
+    if [ ! -d ssl ]
     then
-        mkdir .ssl
+        mkdir ssl
     fi
-    echo "Running > certbot certonly --standalone --cert-path .ssl"
-    certbot certonly --standalone --cert-path .ssl
+    echo "Running > certbot certonly --standalone"
+    certbot certonly -v --standalone ssl || exit
+    # TODO: move certs to appropriate path in project
 fi
 
 if [ -z "`docker images -q $name`" ] && ask "No local container $name found. Pull image $docker_hub_url/$name:$version?"
@@ -26,6 +27,7 @@ if ! [ -z "`docker images -q $name`" ]
     echo "Running Container: $name:$version in detached mode with restart policy unless-stopped."
     docker run -d --restart unless-stopped \
         --name $name \
+        --publish 42069:42069 \
         $volume_opts \
         $name:$version
     

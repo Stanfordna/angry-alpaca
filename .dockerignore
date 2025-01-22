@@ -32,5 +32,6 @@
 **/dist
 **/docker_build.sh
 **/docker_run.sh
+**/ssl
 LICENSE
 README.md

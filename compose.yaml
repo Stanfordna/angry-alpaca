@@ -12,13 +12,15 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: angry-alpaca-frontend
+    container_name: angry-alpaca
     environment:
       NODE_ENV: production
     ports:
-      - 3000:3000
+      - 42069:42069
     volumes:
-      - "angry-alpaca-ssl:/usr/src/app/ssl"
+      - type: bind
+        source: ~/ssl
+        target: /home/angry-alpaca/ssl
 volumes:
   angry-alpaca-ssl:
     external: true
