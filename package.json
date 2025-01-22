@@ -15,12 +15,12 @@
     "react-dom": "^19.0.0",
     "react-email": "^1.9.4",
     "react-router-dom": "^6.15.0",
-    "react-scripts": "^5.0.1",
     "serve": "^14.2.4",
     "util": "^0.12.5",
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
+    "react-scripts": "^5.0.1",
     "@babel/core": "7.22.5",
     "@babel/eslint-parser": "7.22.5",
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
@@ -35,11 +35,15 @@
     }
   },
   "scripts": {
+    "build-prod": "npm run build && npm run validate-ssl",
+    "start-prod": "[ ! -d build ] && echo 'Missing ./build directory. Try running `npm run build-prod`' && exit; npm run serve-prod",
+    "serve-prod": "npm run validate-ssl && serve --ssl-cert ssl/angry-alpaca.crt.pem --ssl-key ssl/angry-alpaca.key.pem --single build --listen $ALPACA_PORT",
+    "validate-ssl": "[ -f ssl/angry-alpaca.crt.pem ] && [ -f ssl/angry-alpaca.key.pem ] || ./scripts/certbot_run.sh || exit",
+    "build-image": "./scripts/docker_build_and_publish.sh",
+    "run-image": "./scripts/docker_run.sh",
+    "serve": "serve --single build --listen $ALPACA_PORT",
     "start": "react-scripts start",
-    "start-ssl": "set HTTPS=true&&set SSL_CRT_FILE=ssl/ssl-cert.pem&&set SSL_KEY_FILE=ssl/rsa-key.pem&&set set PORT=42069&&react-scripts start",
-    "start-prod": "[ ! -d build ] && echo 'Building production release in ./build' && npm run build; npm run check-ssl",
-    "check-ssl": "[ -z \"$(ls -A ssl)\" ] && certbot certonly --standalone --cert-path ssl; npm run serve",
-    "serve": "pwd; ls -la ssl*; serve --ssl-cert ssl/angry-alpaca.crt.pem --ssl-key ssl/angry-alpaca.key.pem --single build --listen 42069",
+    "start-ssl": "set HTTPS=true && set SSL_CRT_FILE=ssl/ssl-cert.pem && set SSL_KEY_FILE=ssl/rsa-key.pem && set set PORT=$ALPACA_PORT && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
