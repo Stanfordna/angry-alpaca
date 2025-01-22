@@ -196,6 +196,8 @@ project-description {
 
 position-skills,
 project-skills {
+  position: absolute;
+  z-index: -2;
   margin-top: 0.5rem;
   font-size: 1rem;
   padding: 0;
@@ -203,9 +205,6 @@ project-skills {
   flex-direction: row;
   flex-wrap: wrap;
   max-width: inherit;
-}
-my-skill:not(:last-child)::after {
-  content: ",";
 }
 
 @media (min-width: 1600px) {
@@ -219,8 +218,28 @@ my-skill:not(:last-child)::after {
 }
 
 my-skill {
+  position: relative;
+  z-index: 1;
   margin-right: 5px;
+  background-color: #92c9ee;
+  color: #0b1d41;
+  padding: 0.5rem;
+  border-radius: 0.7rem;
 }
+my-skill::after {
+    position: absolute;
+    z-index: -1;
+    border-radius: 0.7rem;
+    box-shadow: 0 0 2rem #dc4fff;
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+/* my-skill:not(:last-child)::after {
+  content: ",";
+} */
 
 positions-header,
 projects-header,
