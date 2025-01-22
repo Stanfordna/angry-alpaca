@@ -11,8 +11,8 @@ then
     then
         mkdir ssl
     fi
-    echo "Running > certbot certonly --standalone"
-    certbot certonly -v --standalone ssl || exit
+    echo "Running > ./certbot_run.sh"
+    ./certbot_run.sh || exit
     # TODO: move certs to appropriate path in project
 fi
 
