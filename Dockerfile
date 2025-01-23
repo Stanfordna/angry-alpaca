@@ -46,7 +46,8 @@ COPY --chown=angry-alpaca:angry-alpaca --from=build /home/angry-alpaca/build bui
 COPY package.json .
 # Expose the port that the application listens on.
 # Container will still need to be run with option --publish 42069:42069
-EXPOSE 42069
 # Run the application as non-root angry-alpaca user
 USER angry-alpaca
+EXPOSE 42069
+ENV ALPACA_PORT=42069
 ENTRYPOINT ["npm", "run", "start-prod"]
