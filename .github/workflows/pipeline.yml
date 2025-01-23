@@ -1,0 +1,26 @@
+name: angry-alpaca build and publish to Docker Hub
+
+on:
+  push:
+    branches:
+      - show-mom
+      
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+      - name: Install Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 19.x
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: poduction file
+          path: ./todo/build
