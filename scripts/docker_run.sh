@@ -14,7 +14,7 @@ fi
 
 [ -z "`docker images -q $name`" ] && echo "No local container $name found." || echo "Local container $name already exists."
 
-if && ask "Pull image $docker_hub_url/$name:$version?"
+if ask "Pull image $docker_hub_url/$name:$version?"
 then
     docker pull $docker_hub_url/$name:$version
     docker tag $docker_hub_url/$name:$version $name:$version
