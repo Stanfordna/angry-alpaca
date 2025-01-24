@@ -12,9 +12,9 @@ build_args="\
 if [ "$1" = "--non-interactive" ] || [ "$1" = "-y" ]
 then
     echo "Building Image: $docker_hub_url/$name:$version"
-    docker build .. --tag $docker_hub_url/$name:$version \
+    docker build $ANGRY_ALPACA_HOME --tag $docker_hub_url/$name:$version \
         $build_args \
-        -f ../Dockerfile ..
+        -f $ANGRY_ALPACA_HOME/Dockerfile $ANGRY_ALPACA_HOME
     echo "Pushing Image: $docker_hub_url/$name:$version"
     docker push $docker_hub_url/$name:$version
     docker tag $docker_hub_url/$name:$version $name:$version 
@@ -24,9 +24,9 @@ fi
 if ask "Build docker image $name:$version?"
 then
     echo "Building Image: $name:$version"
-    docker build .. --tag $name:$version \
+    docker build $ANGRY_ALPACA_HOME --tag $name:$version \
         $build_args \
-        -f ../Dockerfile
+        -f $ANGRY_ALPACA_HOME/Dockerfile
 fi
 
 if ask "Publish image to $name:$version Docker Hub?"

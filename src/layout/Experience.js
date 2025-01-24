@@ -41,6 +41,7 @@ function Experience() {
                 <my-skill>Python</my-skill>
                 <my-skill>Java</my-skill>
                 <my-skill>Kubernetes</my-skill>
+                <my-skill>Helm</my-skill>
                 <my-skill>Bash</my-skill>
                 <my-skill>Integration Testing</my-skill>
                 <my-skill>AWS</my-skill>

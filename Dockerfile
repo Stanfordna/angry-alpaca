@@ -27,13 +27,14 @@ RUN --mount=type=bind,source=package.json,target=package.json \
 ################################################################################
 # Create a stage for building the production release in the ./build/ directory.
 ################################################################################
-FROM deps AS build
-# Copy node_modules from build phase since it is ignored from the host
+FROM dependencies AS build
+COPY --chown=angry-alpaca:angry-alpaca public public
+# Copy node_modules from build phase since it is .dockerignore'd from the host
 COPY --chown=angry-alpaca:angry-alpaca --from=dependencies /home/angry-alpaca/node_modules node_modules
 # Copy the source files not ignored by .dockerignore into the image.
 # hopefully docker build will generally be cached up to this point.
 COPY --chown=angry-alpaca:angry-alpaca src src
-RUN npm run build
+RUN  --mount=type=bind,source=package.json,target=package.json npm run build
 
 ################################################################################
 # Create a new stage to run the application with minimal runtime dependencies
