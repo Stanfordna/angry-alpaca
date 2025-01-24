@@ -10,6 +10,7 @@
 FROM node:lts-bookworm-slim AS base
 USER root
 RUN useradd --create-home --shell /bin/bash angry-alpaca
+RUN npm install -g serve
 # Set working directory for all build stages.
 WORKDIR /home/angry-alpaca
 
