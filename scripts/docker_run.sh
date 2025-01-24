@@ -3,23 +3,20 @@
 version='0.1.0'
 name='angry-alpaca'
 docker_hub_url='docker.io/angryalpaca'
-volume_opts="-v /${PWD}/ssl:/home/angry-alpaca/ssl"
+volume_opts="-v $ANGRY_ALPACA_HOME/ssl:/home/angry-alpaca/ssl"
 
 if ask "Generate new ssl certs with certbot?"
 then
-    if [ ! -d ssl ]
-    then
-        mkdir ssl
-    fi
-    echo "Running > ./certbot_run.sh"
-    ./certbot_run.sh || exit
+    echo "Running > $ANGRY_ALPACA_HOME/scripts/certbot_run.sh"
+    $ANGRY_ALPACA_HOME/scripts/certbot_run.sh || exit
     # TODO: move certs to appropriate path in project
 fi
 
 if [ -z "`docker images -q $name`" ] && ask "No local container $name found. Pull image $docker_hub_url/$name:$version?"
 then
-    docker pull $docker_hub_url/$name:$version $name:$version
-    echo "Pulled $docker_hub_url/$name:$version as $name:$version"
+    docker pull $docker_hub_url/$name:$version
+    docker tag $docker_hub_url/$name:$version $name:$version
+    echo "Pulled $docker_hub_url/$name:$version and re-tagged as $name:$version"
 fi
 
 if ! [ -z "`docker images -q $name`" ]
