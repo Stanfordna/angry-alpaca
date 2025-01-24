@@ -36,7 +36,6 @@ function Experience() {
                 As a result, a single tightly controlled container in k8s runs our tests and our testers
                 do not need to configure their workspace instances for testing.
               </position-description>
-              <h4>Skills Practiced:&nbsp;</h4>
               <position-skills>
                 <my-skill>Python</my-skill>
                 <my-skill>Java</my-skill>
@@ -60,7 +59,6 @@ function Experience() {
                 Contractied with Sandia National Labs in Albuquerque, New Mexico to build 
                 full stack applications and automate workflows for the Department of Energy.
               </position-description>
-              <h4>Skills Practiced:&nbsp;</h4>
               <position-skills>
                 <my-skill>Apache Tomcat</my-skill>
                 <my-skill>SQL</my-skill>
@@ -84,7 +82,6 @@ function Experience() {
                 Used shell and Python scripting to retrieve, process and report project milestone progress data to 
                 the National Institutes of Health.
               </position-description>
-              <h4>Skills Practiced:&nbsp;</h4>
               <position-skills>
                 <my-skill>Apache HTTP Server</my-skill>
                 <my-skill>PHP</my-skill>
@@ -111,7 +108,6 @@ function Experience() {
                 in the development of Wordpress modules. Implemented bash and Python scripts in order to monitor
                 traffic through our Apache web and mail servers to more quickly respond to cyber threats.
               </position-description>
-              <h4>Skills Practiced:&nbsp;</h4>
               <position-skills> 
                 <my-skill>Apache HTTP Server</my-skill>
                 <my-skill>DNS</my-skill>

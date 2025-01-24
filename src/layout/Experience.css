@@ -196,7 +196,6 @@ project-description {
 
 position-skills,
 project-skills {
-  position: absolute;
   z-index: -2;
   margin-top: 0.5rem;
   font-size: 1rem;
@@ -204,6 +203,7 @@ project-skills {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  width: 100%;
   max-width: inherit;
 }
 
