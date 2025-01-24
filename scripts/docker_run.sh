@@ -12,7 +12,9 @@ then
     # TODO: move certs to appropriate path in project
 fi
 
-if [ -z "`docker images -q $name`" ] && ask "No local container $name found. Pull image $docker_hub_url/$name:$version?"
+[ -z "`docker images -q $name`" ] && echo "No local container $name found." || echo "Local container $name already exists."
+
+if && ask "Pull image $docker_hub_url/$name:$version?"
 then
     docker pull $docker_hub_url/$name:$version
     docker tag $docker_hub_url/$name:$version $name:$version
