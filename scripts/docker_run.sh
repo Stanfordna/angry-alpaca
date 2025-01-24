@@ -3,7 +3,7 @@
 version='0.1.0'
 name='angry-alpaca'
 docker_hub_url='docker.io/angryalpaca'
-volume_opts="-v $ANGRY_ALPACA_HOME/ssl:/home/angry-alpaca/ssl"
+ssl_mount="$ANGRY_ALPACA_HOME/ssl:/home/angry-alpaca/ssl"
 
 if ask "Generate new ssl certs with certbot?"
 then
@@ -27,7 +27,7 @@ if ! [ -z "`docker images -q $name`" ]
     docker run -d --restart unless-stopped \
         --name $name \
         --publish 42069:42069 \
-        $volume_opts \
+        --volume /$ssl_mount \
         $name:$version
     
     if ask "Shell into container?"
