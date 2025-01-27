@@ -203,6 +203,7 @@ project-skills {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  row-gap: 0.5rem;
   width: 100%;
   max-width: inherit;
 }

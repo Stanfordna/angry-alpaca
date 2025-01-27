@@ -28,13 +28,10 @@ function Experience() {
                 Northrop Grumman Space Sector
               </position-employer>
               <position-description>
-                I am currently the sole developer on the Systems Engineering and Integration Test team (SEIT)
-                for my project with Northrop Grumman Space Systems. I write integrations tests using 
-                Python's Robot Framwework to validate messages produced by various Java and Python 
-                Microservices. I serve as the primary authority within my mission with regard to the
-                code base and functionality of our suite of tests, and have containerized our test suite.
-                As a result, a single tightly controlled container in k8s runs our tests and our testers
-                do not need to configure their workspace instances for testing.
+                I assist the Systems Engineering and Integration Test team by writing integration
+                tests to validate the functionality of the microservices that conduct the mission
+                my project serves. I implement additional functionalities to our test suite so that
+                we can conduct tests of greater complexity.
               </position-description>
               <position-skills>
                 <my-skill>Python</my-skill>
@@ -78,9 +75,9 @@ function Experience() {
                 University of New Mexico
               </position-employer>
               <position-description>
-                Migrated UNM web applications onto Drupal CMS. Built custom modules for Drupal using PHP and Javascript.
-                Used shell and Python scripting to retrieve, process and report project milestone progress data to 
-                the National Institutes of Health.
+                Migrated UNM web applications onto Drupal CMS and build custom Drupal modules using PHP 
+                and Javascript. Used shell and Python scripting to retrieve, process and report project
+                milestone progress data to the National Institutes of Health.
               </position-description>
               <position-skills>
                 <my-skill>Apache HTTP Server</my-skill>
