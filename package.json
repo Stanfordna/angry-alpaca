@@ -43,7 +43,7 @@
     "run-image": "./scripts/docker_run.sh",
     "serve": "serve --single build --listen $ALPACA_PORT",
     "start": "react-scripts start",
-    "start-ssl": "set HTTPS=true && set SSL_CRT_FILE=ssl/ssl-cert.pem && set SSL_KEY_FILE=ssl/rsa-key.pem && set set PORT=$ALPACA_PORT && react-scripts start",
+    "start-ssl": "set HTTPS=true && set SSL_CRT_FILE=ssl/ssl-cert.pem && set SSL_KEY_FILE=ssl/rsa-key.pem && set PORT=$ALPACA_PORT && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",

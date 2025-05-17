@@ -3,7 +3,8 @@ if [ "$1" = "--non-interactive" ] || [ "$1" = "-y" ] || \
    ask "Did you make sure your DNS 'A' record for nicholasstanford.dev points to `curl ifconfig.me 2>/dev/null`?" && \
    ask "Did you forward port 80 on your router to $ALPACA_IP_ADDR:80? If not, go do it!"
 then
-    certbot certonly \
+    certbot certonly -v \
+    --force-renewal \
     --non-interactive \
     --standalone \
     --agree-tos \
