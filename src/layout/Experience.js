@@ -53,7 +53,7 @@ function Experience() {
                 Edgewater Federal Solutions
               </position-employer>
               <position-description>
-                Contractied with Sandia National Labs in Albuquerque, New Mexico to build 
+                Contracted with Sandia National Labs in Albuquerque, New Mexico to build 
                 full stack applications and automate workflows for the Department of Energy.
               </position-description>
               <position-skills>
