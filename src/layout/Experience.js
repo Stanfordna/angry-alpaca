@@ -28,10 +28,12 @@ function Experience() {
                 Northrop Grumman Space Sector
               </position-employer>
               <position-description>
-                I assist the Systems Engineering and Integration Test team by writing integration
-                tests to validate the functionality of the microservices that conduct the mission
-                my project serves. I implement additional functionalities to our test suite so that
-                we can conduct tests of greater complexity.
+                I write features and bugfixes for Java Spring- and Python-based microservices and
+                integrate them to our Kubernetes CLusters. I also serve the Systems Engineering
+                I assist  and Integration Test team by writing integration tests using Robot Framework
+                to validate the functionality of the microservices that conduct the mission
+                my project serves. I implement additional functionalities to our test driver package
+                so that we can conduct tests of greater complexity.
               </position-description>
               <position-skills>
                 <my-skill>Python</my-skill>
