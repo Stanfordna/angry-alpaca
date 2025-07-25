@@ -29,7 +29,7 @@ function Experience() {
               </position-employer>
               <position-description>
                 I write features and bugfixes for Java Spring- and Python-based microservices and
-                integrate them to our Kubernetes CLusters. I also serve the Systems Engineering
+                integrate them to our Kubernetes Clusters. I also serve the Systems Engineering
                 I assist  and Integration Test team by writing integration tests using Robot Framework
                 to validate the functionality of the microservices that conduct the mission
                 my project serves. I implement additional functionalities to our test driver package
